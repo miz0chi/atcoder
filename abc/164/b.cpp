@@ -12,7 +12,7 @@ int main() {
   int A, B, C, D;
   cin >> A >> B >> C >> D;
 
-  for (int i = 0; 1; i++) {
+  /*for (int i = 0; 1; i++) {
     if (i % 2 == 0) {
       C -= B;
     } else {
@@ -27,5 +27,10 @@ int main() {
     cout << "No" << nl;
   } else {
     cout << "Yes" << nl;
-  }
+  }*/
+
+  int X = (A + D - 1) / D;
+  int Y = (C + B - 1) / B;
+  // cerr << X << ":" << Y << nl;
+  cout << (X >= Y ? "Yes" : "No") << nl;
 }
