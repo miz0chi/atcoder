@@ -11,7 +11,7 @@ int main() {
 
   int N;
   cin >> N;
-  set<string> S;
+  unordered_set<string> S;
 
   for (int i = 0; i < N; i++) {
     string s;
