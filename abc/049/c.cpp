@@ -59,8 +59,7 @@ int main() {
         bo = false;
         break;
       }
-    }
-    if (!bo && S.substr(i, 2) == "er") {
+    } else if (!bo && S.substr(i, 2) == "er") {
       if (s3 == "dream") {
         bo = true;
         s3 = "er";
