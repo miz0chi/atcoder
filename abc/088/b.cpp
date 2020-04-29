@@ -31,12 +31,12 @@ int main() {
 
   int N;
   cin >> N;
-  priority_queue<int> a;//ありがとうございました。昔々あるところに
+  priority_queue<int> a;
   for (int i = 0; i < N; i++) {
     int j;
     cin >> j;
     a.push(j);
-  } //
+  }  //
 
   int bob = 0, alice = 0;
   for (int i = 0; i < N; i++) {
