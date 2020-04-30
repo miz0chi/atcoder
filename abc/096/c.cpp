@@ -42,12 +42,12 @@ int main() {
     }
   }
 
-  for (int i = 0; i < H; i++) {
-    for (int j = 0; j < W; j++) {
-      cerr << sb[i][j];
-    }
-    cerr << '\n';
-  }
+  // for (int i = 0; i < H; i++) {
+  //   for (int j = 0; j < W; j++) {
+  //     cerr << sb[i][j];
+  //   }
+  //   cerr << '\n';
+  // }
 
   cout << "Yes" << '\n';
 
