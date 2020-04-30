@@ -18,12 +18,12 @@ int main() {
   }
 
   int64_t smax = 0;
-  for (int l = 0; l < M - 1; l++) {
-    for (int i = 1; i + l < M; i++) {
+  for (int i = 0; i < M - 1; i++) {
+    for (int j = i + 1; j < M; j++) {
       int64_t sum = 0;
-      for (int j = 0; j < N; j++) {
-        sum += max(A[j][l], A[j][l + i]);
-        // cerr << A[j][l] << " " << A[j][l + i] << '\n';
+      for (int k = 0; k < N; k++) {
+        sum += max(A[k][i], A[k][j]);
+        // cerr << A[k][i] << " " << A[k][j] << '\n';
       }
       // cerr << sum << '\n';
       smax = max(smax, sum);
