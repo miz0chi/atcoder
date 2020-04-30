@@ -18,20 +18,18 @@ int main() {
   }
 
   int64_t smax = 0;
-  for (int i = 0; i < M - 1; i++) {
-    int64_t sum = 0;
-    for (int j = 0; j < N; j++) {
-      int amax = 0;
-      for (int k = 0; k < i + 2; k += i + 1) {
-        amax = max(amax, A[j][k]);
-        cerr << A[j][k] << " ";
+  for (int l = 0; l < M - 1; l++) {
+    for (int i = 1; i + l < M; i++) {
+      int64_t sum = 0;
+      for (int j = 0; j < N; j++) {
+        sum += max(A[j][l], A[j][l + i]);
+        // cerr << A[j][l] << " " << A[j][l + i] << '\n';
       }
-      sum += amax;
-      cerr << '\n';
+      // cerr << sum << '\n';
+      smax = max(smax, sum);
     }
-    cerr << sum << '\n';
-    smax = max(smax, sum);
   }
+  // cerr << smax << '\n';
   cout << smax << '\n';
   return 0;
 }
