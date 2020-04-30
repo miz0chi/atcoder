@@ -27,7 +27,7 @@ int main() {
         sb[i][j] = true;
       } else {
         for (int k = 0; k < 4; k++) {
-          if (i + y[k] >= 0 && i + y[k] < W && j + x[k] >= 0 && j + x[k] < H) {
+          if (i + y[k] >= 0 && i + y[k] < H && j + x[k] >= 0 && j + x[k] < W) {
             if (s[i + y[k]][j + x[k]] == '#') {
               sb[i + y[k]][j + x[k]] = true;
               sb[i][j] = true;
@@ -41,6 +41,14 @@ int main() {
       }
     }
   }
+
+  for (int i = 0; i < H; i++) {
+    for (int j = 0; j < W; j++) {
+      cerr << sb[i][j];
+    }
+    cerr << '\n';
+  }
+
   cout << "Yes" << '\n';
 
   return 0;
