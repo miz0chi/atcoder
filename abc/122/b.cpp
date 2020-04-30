@@ -10,22 +10,15 @@ int main() {
   string S;
   cin >> S;
 
-  int max = 0, count = 0;
-  bool b = false;
+  int cmax = 0, count = 0;
   for (char ch : S) {
-    if (!b) {
-      count = 0;
-    }
     if (ch == 'A' || ch == 'C' || ch == 'G' || ch == 'T') {
       count++;
-      if (count > max) {
-        max = count;
-      }
-      b = true;
+      cmax = max(cmax, count);
     } else {
-      b = false;
+      count = 0;
     }
   }
-  cout << max << '\n';
+  cout << cmax << '\n';
   return 0;
 }
