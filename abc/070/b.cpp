@@ -11,7 +11,7 @@ int main() {
   cin >> A >> B >> C >> D;
 
   int t = 0;
-  if (min(B, D) < max(A, C)) {
+  if (min(B, D) > max(A, C)) {
     t = min(B, D) - max(A, C);
   }
 
