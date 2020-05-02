@@ -9,8 +9,7 @@ int main() {
 
   int K, A, B;
   cin >> K >> A >> B;
-  int x = B / K;
-  if (A <= K * x)
+  if (A <= B / K * K)
     cout << "OK" << '\n';
   else
     cout << "NG" << '\n';
