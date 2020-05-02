@@ -11,9 +11,7 @@ int main() {
   cin >> a >> b >> x;
 
   bool bo = false;
-  if (a == 0) {
-    bo = true;
-  }
+  if (a == 0) bo = true;
   a = (a - 1 + bo) / x;
   b = b / x + bo;
   b -= a;
