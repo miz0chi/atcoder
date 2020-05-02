@@ -10,8 +10,12 @@ int main() {
   int64_t a, b, x;
   cin >> a >> b >> x;
 
-  a = (a - 1) / x + 1;
-  b = (b / x) + 1;
+  bool bo = false;
+  if (a == 0) {
+    bo = true;
+  }
+  a = (a - 1 + bo) / x;
+  b = b / x + bo;
   b -= a;
 
   cout << b << '\n';
