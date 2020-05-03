@@ -4,13 +4,13 @@ using namespace std;
 using Graph = vector<vector<int>>;
 
 vector<bool> seen, hb;
-void dfs(const Graph &G, const vector<int64_t> &h, int v) {
-  seen[v] = true;
 
-  for (auto next_v : G[v]) {
+void dfs(const Graph &r, const vector<int64_t> &h, int v) {
+  seen[v] = true;
+  for (auto next_v : r[v]) {
     if (h[v] <= h[next_v]) hb[v] = false;
     if (seen[next_v]) continue;
-    dfs(G, h, next_v);
+    dfs(r, h, next_v);
   }
 }
 
