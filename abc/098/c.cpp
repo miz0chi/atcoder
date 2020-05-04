@@ -11,16 +11,19 @@ int main() {
   string s;
   cin >> n >> s;
 
-  int mins = n;
-  for (int i = 0; i < n; i++) {
-    int sum = 0;
-    for (int j = 0; j < n; j++) {
-      if (i < j && s[j] != 'W')
-        sum++;
-      else if (i > j && s[j] != 'E')
-        sum++;
+  int sum = 0;
+  for (int i = 1; i < n; i++) {
+    if (s[i] == 'E') sum++;
+  }
+  int mins = sum;
+  for (int i = 1; i < n; i++) {
+    if (s[i - 1] == 'W') {
+      sum++;
     }
-    mins = min(mins, sum);
+    if (s[i] == 'E') {
+      sum--;
+      mins = min(mins, sum);
+    }
   }
 
   cout << mins << '\n';
