@@ -14,22 +14,21 @@ int main() {
   int64_t ans = 0;
   for (int i = 0; i < (1 << n); ++i) {
     int64_t tmp = (s[0] - '0');
-    cerr << s[0];
+    // cerr << s[0];
     int64_t sum = 0;
     for (int j = 0; j < n; ++j) {
       if (i & (1 << j)) {
         sum += tmp;
-        tmp = (s[j + 1] - '0');
-        cerr << "+"s;
-      } else {
-        tmp *= 10;
-        tmp += (s[j + 1] - '0');
+        tmp = 0;
+        // cerr << "+"s;
       }
-      cerr << s[j + 1];
+      tmp *= 10;
+      tmp += (s[j + 1] - '0');
+      // cerr << s[j + 1];
     }
     sum += tmp;
     ans += sum;
-    cerr << " " << sum << '\n';
+    // cerr << " "s << sum << '\n';
   }
 
   cout << ans << '\n';
