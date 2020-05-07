@@ -9,7 +9,6 @@ int main() {
 
   int m;
   cin >> m;
-  int k = m / 1000;
 
   if (m < 1000) {
     cout << 0;
@@ -18,13 +17,13 @@ int main() {
     } else {
       cout << m / 100 << '\n';
     }
-  } else if (1 <= k && k <= 5) {
+  } else if (1000 <= m && m <= 5000) {
     cout << m / 100 << '\n';
-  } else if (6 <= k && k <= 30) {
-    cout << k + 50 << '\n';
-  } else if (35 <= k && k <= 70) {
-    cout << ((k - 30) / 5 + 80) << '\n';
-  } else if (70 < k) {
+  } else if (6000 <= m && m <= 30000) {
+    cout << m / 1000 + 50 << '\n';
+  } else if (35000 <= m && m <= 70000) {
+    cout << ((m / 1000 - 30) / 5 + 80) << '\n';
+  } else if (70000 < m) {
     cout << 89 << '\n';
   }
 
