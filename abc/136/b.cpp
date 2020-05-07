@@ -13,13 +13,16 @@ int main() {
   int64_t sum = 0;
 
   for (int64_t i = 1; i <= n; ++i) {
-    int cnt = 0;
-    int64_t j = i;
-    while (j) {
-      j /= 10;
-      ++cnt;
-    }
-    if (cnt % 2 == 1) {
+    // int cnt = 0;
+    // int64_t j = i;
+    // while (j) {
+    //   j /= 10;
+    //   ++cnt;
+    // }
+    // if (cnt % 2 == 1) {
+    //   ++sum;
+    // }
+    if (to_string(i).size() % 2 == 1) {
       ++sum;
     }
   }
