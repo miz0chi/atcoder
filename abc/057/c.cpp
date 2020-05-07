@@ -11,10 +11,9 @@ int main() {
   cin >> n;
 
   int r = sqrt(n);
-  if (r % 2 == 0) r++;
-  for (int64_t i = r; i <= n; i += 2) {
+  for (int64_t i = r + 1; i >= 1; --i) {
     if (n % i == 0) {
-      cout << to_string(i).size() << '\n';
+      cout << to_string(n / i).size() << '\n';
       break;
     }
   }
