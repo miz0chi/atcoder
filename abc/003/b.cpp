@@ -10,34 +10,12 @@ int main() {
   string s, t;
   cin >> s >> t;
   string a = "atcoder@";
+  unordered_map<char, int> m{{'a', 1}, {'t', 1}, {'c', 1}, {'o', 1},
+                             {'d', 1}, {'e', 1}, {'r', 1}, {'@', 10}};
 
   for (int i = 0; i < s.size(); ++i) {
     if (s[i] != t[i]) {
-      if (s[i] == '@') {
-        bool x = false;
-        for (int j = 0; j < a.size(); ++j) {
-          if (t[i] == a[j]) {
-            x = true;
-            break;
-          }
-        }
-        if (x == false) {
-          cout << "You will lose"s << '\n';
-          return 0;
-        }
-      } else if (t[i] == '@') {
-        bool x = false;
-        for (int j = 0; j < a.size(); ++j) {
-          if (s[i] == a[j]) {
-            x = true;
-            break;
-          }
-        }
-        if (x == false) {
-          cout << "You will lose"s << '\n';
-          return 0;
-        }
-      } else {
+      if (m[s[i]] + m[t[i]] < 11) {
         cout << "You will lose"s << '\n';
         return 0;
       }
