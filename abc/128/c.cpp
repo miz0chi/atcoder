@@ -33,7 +33,7 @@ int main() {
     for (int j = 0; j < m; ++j) {
       int x = 0;
       for (int k : ms[j]) {
-        if ((i >> k) & 1) {
+        if (i & (1 << k)) {
           x ^= 1;
         }
       }
