@@ -10,8 +10,8 @@ int main() {
   // input 1
   int n, m;
   cin >> n >> m;
-  vector<vector<int>> ms(m);
   // input 2
+  vector<vector<int>> ms(m);
   for (int i = 0; i < m; ++i) {
     int x;
     cin >> x;
