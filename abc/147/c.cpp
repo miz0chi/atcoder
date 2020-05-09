@@ -28,17 +28,12 @@ int main() {
     for (int j = 0; j < n; ++j) {
       if (!(i & (1 << j))) continue;
       for (int k = 0; k < x[j].size(); ++k) {
-        // cerr << bitset<3>(i) << ": " << x[j][k] << "-" << ((i >> x[j][k]) &
-        // 1)
-        //      << "-" << y[j][k] << ", ";
         if (((i >> x[j][k]) & 1) != y[j][k]) {
           ok = false;
           break;
         }
       }
-      // cerr << '\n';
     }
-    // cerr << '\n';
     if (ok) ans = max(ans, __builtin_popcount(i));
   }
   cout << ans << '\n';
