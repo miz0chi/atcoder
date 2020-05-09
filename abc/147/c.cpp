@@ -23,17 +23,15 @@ int main() {
   }
 
   int ans = 0;
-  for (int i = 0; i < (1 << n); ++i) {
+  for (int i = 1; i < (1 << n); ++i) {
     bool ok = true;
     for (int j = 0; j < n; ++j) {
-      bool lie = false;
-      if (!(i & (1 << j))) {
-        lie = true;
-      }
+      if (!(i & (1 << j))) continue;
       for (int k = 0; k < x[j].size(); ++k) {
-        // cerr << bitset<3>(i) << ": " << x[j][k] << "-"
-        //      << (!(i & (1 << x[j][k]))) << "-" << (y[j][k] == lie) << " ";
-        if ((!(i & (1 << x[j][k]))) != (y[j][k] == lie)) {
+        // cerr << bitset<3>(i) << ": " << x[j][k] << "-" << ((i >> x[j][k]) &
+        // 1)
+        //      << "-" << y[j][k] << ", ";
+        if (((i >> x[j][k]) & 1) != y[j][k]) {
           ok = false;
           break;
         }
@@ -41,10 +39,7 @@ int main() {
       // cerr << '\n';
     }
     // cerr << '\n';
-    if (ok == false) {
-      continue;
-    }
-    ans = max(ans, __builtin_popcount(i));
+    if (ok) ans = max(ans, __builtin_popcount(i));
   }
   cout << ans << '\n';
 
