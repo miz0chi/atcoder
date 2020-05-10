@@ -16,22 +16,22 @@ int main() {
     --a[i];
   }
 
-  int64_t goal = 0;
   unordered_set<int64_t> c;
+  int64_t goal = 0;
   c.insert(goal);
-  int64_t csize = c.size();
+  cerr << goal << '\n';
   bool ng = true;
-  for (int64_t i = 0; i < k; ++i) {
+  for (int64_t i = 1; i <= k; ++i) {
     goal = a[goal];
     c.insert(goal);
-    if (csize == c.size() && ng) {
-      int64_t loop = csize - *c.find(goal);
-      cerr << csize << " " << *c.find(goal) << " " << loop << '\n';
+    cerr << goal << '\n';
+    auto itc = c.find(goal);
+    if (*itc && ng) {
+      int64_t loop = distance(itc, c.end());
+      cerr << *itc << " " << loop << '\n';
       k %= loop;
       i = 0;
       ng = false;
-    } else {
-      csize = c.size();
     }
   }
 
