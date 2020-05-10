@@ -25,7 +25,7 @@ int main() {
     int cnt = __builtin_popcount(i);
     if (cnt <= ans) continue;
     bool ok = true;
-    for (int j = 0; j < n; ++j)
+    for (int j = 0; j < n - 1; ++j)
       if (i & (1 << j))
         for (int k = j + 1; k < n; ++k)
           if (i & (1 << k))
