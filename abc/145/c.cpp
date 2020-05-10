@@ -5,7 +5,7 @@ using namespace std;
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
-  cout << fixed << setprecision(1);
+  cout << fixed << setprecision(10);
 
   int n;
   cin >> n;
@@ -30,9 +30,9 @@ int main() {
   do {
     for (int i = 0; i < n - 1; ++i) {
       sum += dist[v[i]][v[i + 1]];
-      cerr << v[i] << " ";
+      // cerr << v[i] << " ";
     }
-    cerr << '\n';
+    // cerr << '\n';
   } while (next_permutation(v.begin(), v.end()));
 
   int Factorial = 1;
