@@ -10,18 +10,28 @@ int main() {
   int a, b, c, k;
   cin >> a >> b >> c >> k;
 
-  int sum = 0;
-  for (int i = 0; i < k; ++i) {
-    if (a > 0) {
-      ++sum;
-      --a;
-    } else if (b > 0) {
-      --b;
-    } else {
-      --sum;
-    }
-  }
-  cout << sum << '\n';
+  int ans = 0;
+
+  // for (int i = 0; i < k; ++i) {
+  //   if (a > 0) {
+  //     ++ans;
+  //     --a;
+  //   } else if (b > 0) {
+  //     --b;
+  //   } else {
+  //     --ans;
+  //   }
+  // }
+
+  int xa = min(a, k);
+  k -= xa;
+  int xb = min(b, k);
+  k -= xb;
+  int xc = k;
+
+  ans = xa - xc;
+
+  cout << ans << '\n';
 
   return 0;
 }
