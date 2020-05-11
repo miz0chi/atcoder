@@ -10,13 +10,19 @@ int main() {
   string s, t;
   cin >> s >> t;
 
-  for (int i = 0; i < s.size(); ++i) {
-    if (s[i] != t[i]) {
-      cout << "No" << '\n';
-      return 0;
-    }
-  }
-  cout << "Yes" << '\n';
+  // for (int i = 0; i < s.size(); ++i) {
+  //   if (s[i] != t[i]) {
+  //     cout << "No" << '\n';
+  //     return 0;
+  //   }
+  // }
+  // cout << "Yes" << '\n';
+
+  t.pop_back();
+  if (s == t)
+    cout << "Yes" << '\n';
+  else
+    cout << "No" << '\n';
 
   return 0;
 }
