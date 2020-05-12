@@ -21,13 +21,16 @@ int main() {
   int c = 1, l = 0;
   int v = 1;
   while (ord[v] == -1) {
-    cerr << v << " ";
+    // cerr << v << " ";
     ord[v] = s.size();
     s.push_back(v);
     v = a[v - 1];
   }
+  cerr << '\n';
   c = s.size() - ord[v];
   l = ord[v];
+  // cerr << "c: " << c << '\n';
+  // cerr << "l: " << l << '\n';
 
   if (k < l) {
     cout << s[k] << '\n';
