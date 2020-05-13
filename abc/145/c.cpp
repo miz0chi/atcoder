@@ -23,7 +23,8 @@ int main() {
   do {
     double sum = 0.0;
     for (int i = 0; i < n - 1; ++i) {
-      sum += sqrt(pow((x[v[i]] - x[v[i + 1]]), 2) + pow((y[v[i]] - y[v[i + 1]]), 2));
+      sum += sqrt(pow((x[v[i]] - x[v[i + 1]]), 2) +
+                  pow((y[v[i]] - y[v[i + 1]]), 2));
     }
     ++a;
     ans += sum;
