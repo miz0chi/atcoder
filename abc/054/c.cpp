@@ -29,9 +29,12 @@ int main() {
     if (g[0] != 0) break;
     bool ok = true;
     for (int i = 1; i < n; ++i) {
-      if (p[g[i - 1]][g[i]] == false) ok = false;
+      if (!p[g[i - 1]][g[i]]) {
+        ok = false;
+        break;
+      }
     }
-    if (ok == true) ++ans;
+    if (ok) ++ans;
   } while (next_permutation(g.begin(), g.end()));
 
   cout << ans << '\n';
