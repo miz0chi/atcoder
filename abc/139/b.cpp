@@ -10,15 +10,15 @@ int main() {
   int a, b;
   cin >> a >> b;
 
-  int ans = 1;
+  int ans = 0;
 
-  if (b - a > 0) {
+  if (b != 1) {
     b -= a;
-    --a;
-    if (b % a == 0) {
-      ans += b / a;
-    } else {
-      ans += b / a + 1;
+    ++ans;
+    while (b > 0) {
+      ++b;
+      b -= a;
+      ++ans;
     }
   }
 
