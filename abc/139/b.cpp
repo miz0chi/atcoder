@@ -10,11 +10,16 @@ int main() {
   int a, b;
   cin >> a >> b;
 
-  int ans = 0;
-  if (b % a == 0) {
-    ans = b / a;
-  } else {
-    ans = b / a + 1;
+  int ans = 1;
+
+  if (b - a > 0) {
+    b -= a;
+    --a;
+    if (b % a == 0) {
+      ans += b / a;
+    } else {
+      ans += b / a + 1;
+    }
   }
 
   cout << ans << '\n';
