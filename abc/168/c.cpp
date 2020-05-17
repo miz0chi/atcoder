@@ -15,14 +15,18 @@ int main() {
   cin >> a >> b >> h >> m;
 
   double mang, hang, ang, ans;
-  mang = m * 360 / 60;
-  hang = h * 360 / 12;
-  hang += m * 360 / 720;
+  mang = m * 360.0 / 60.0;
+  hang = h * 360.0 / 12.0;
+  hang += m * 360.0 / 720.0;
 
-  mang = deg_to_rad(mang);
-  hang = deg_to_rad(hang);
+  mang = mang;
+  hang = hang;
 
   ang = max(mang, hang) - min(mang, hang);
+  if (ang > 180) {
+    ang = 360 - ang;
+  }
+  ang = deg_to_rad(ang);
 
   ans = sqrt((a * a) + (b * b) - (2 * a * b * cos(ang)));
 
