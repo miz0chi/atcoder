@@ -20,7 +20,7 @@ int main() {
   sort(x.begin(), x.end());
 
   int ans = inf;
-  for (int i = x[0]; i < x[n - 1]; ++i) {
+  for (int i = x[0]; i <= x[n - 1]; ++i) {
     int sum = 0;
     for (int j = 0; j < n; ++j) {
       sum += pow(x[j] - i, 2);
