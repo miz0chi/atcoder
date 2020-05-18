@@ -26,7 +26,7 @@ int main() {
   // }
   // ang = deg_to_rad(ang);
 
-  double ans = sqrt((a * a + b * b) - (2.0 * a * b) * cos(rad));
+  double ans = sqrt(a * a + b * b - 2.0 * a * b * cos(rad));
   cout << ans << '\n';
 
   return 0;
