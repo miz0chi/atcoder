@@ -10,10 +10,10 @@ int main() {
   cin.tie(nullptr);
   cout << fixed << setprecision(20);
 
-  int a, b, h, m;
+  double a, b, h, m;
   cin >> a >> b >> h >> m;
 
-  double rad = M_PI * 2 * ((double)h / 12 + (double)m / 720 - (double)m / 60);
+  double rad = M_PI * 2.0 * (h / 12.0 + m / 720.0 - m / 60.0);
 
   // double mang, hang, ang, ans;
   // mang = m * 360.0 / 60.0;
@@ -26,7 +26,7 @@ int main() {
   // }
   // ang = deg_to_rad(ang);
 
-  double ans = sqrt((double)(a * a + b * b) - (double)(2 * a * b) * cos(rad));
+  double ans = sqrt((a * a + b * b) - (2.0 * a * b) * cos(rad));
   cout << ans << '\n';
 
   return 0;
