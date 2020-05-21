@@ -10,6 +10,11 @@ int main() {
   int64_t h, w;
   cin >> h >> w;
 
+  if (h == 1 || w == 1) {
+    cout << 1 << '\n';
+    return 0;
+  }
+
   int64_t ans = h * w;
   if (ans % 2 == 1) {
     ++ans;
