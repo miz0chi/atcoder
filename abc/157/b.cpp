@@ -30,19 +30,18 @@ int main() {
       }
     }
   }
+  string ans = "No";
   for (int i = 0; i < 3; ++i) {
     if ((chc[i][0] && chc[i][1] && chc[i][2]) ||
         (chc[0][i] && chc[1][i] && chc[2][i])) {
-      cout << "Yes" << '\n';
-      return 0;
+      ans = "Yes";
     }
   }
   if ((chc[0][0] && chc[1][1] && chc[2][2]) ||
       (chc[0][2] && chc[1][1] && chc[2][0])) {
-    cout << "Yes" << '\n';
-    return 0;
+    ans = "Yes";
   }
-  cout << "No" << '\n';
+  cout << ans << '\n';
 
   return 0;
 }
