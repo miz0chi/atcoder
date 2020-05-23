@@ -11,9 +11,7 @@ int main() {
   cin >> n;
 
   if (n == 1) {
-    char ch;
-    cin >> ch;
-    cout << ch << '\n';
+    cout << -1 << '\n';
     return 0;
   }
 
