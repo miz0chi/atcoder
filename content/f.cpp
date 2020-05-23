@@ -18,13 +18,13 @@ int main() {
   }
   string ans(n, 's');
   int i = 0;
-  while (i < n - 1) {
+  while (i <= n - 1) {
     bool ok = false;
     for (int j = 0; j < n; ++j) {
       for (int k = 0; k < n; ++k) {
         if (a[i][j] == a[n - 1][k]) {
           ans[i] = a[i][j];
-          ans[n - 1] = a[n - 1][k];
+          ans[n - 1] = a[i][j];
           ok = true;
           break;
         }
