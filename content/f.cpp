@@ -9,8 +9,15 @@ int main() {
 
   int n;
   cin >> n;
-  vector<vector<char>> a(n, vector<char>(n));
 
+  if (n == 1) {
+    char ch;
+    cin >> ch;
+    cout << ch << '\n';
+    return 0;
+  }
+
+  vector<vector<char>> a(n, vector<char>(n));
   for (int i = 0; i < n; ++i) {
     for (int j = 0; j < n; ++j) {
       cin >> a[i][j];
@@ -18,6 +25,7 @@ int main() {
   }
   string ans(n, 's');
   int i = 0;
+
   while (i <= n - 1) {
     bool ok = false;
     for (int j = 0; j < n; ++j) {
