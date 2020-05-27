@@ -12,7 +12,7 @@ int main() {
 
   int64_t a0 = a, b0 = b, c0 = c;
   int i = 0;
-  while (a % 2 != 1 && b % 2 != 1 && c % 2 != 1) {
+  while (!(a % 2) && !(b % 2) && !(c % 2)) {
     ++i;
     int64_t bc = (b + c) / 2, ca = (c + a) / 2, ab = (a + b) / 2;
     a = bc;
