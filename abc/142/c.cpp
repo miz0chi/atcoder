@@ -10,10 +10,11 @@ int main() {
   int n;
   cin >> n;
 
-  vector<int> a(n), ans(n);
-  for (int i = 0; i < n; ++i) {
-    cin >> a[i];
-    ans[a[i] - 1] = i + 1;
+  vector<int> ans(n);
+  for (int i = 1; i <= n; ++i) {
+    int a;
+    cin >> a;
+    ans[a - 1] = i;
   }
 
   for (int i = 0; i < n; ++i) {
