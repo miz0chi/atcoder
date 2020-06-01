@@ -3,6 +3,7 @@
 #include <boost/multiprecision/cpp_int.hpp>
 
 using namespace std;
+namespace mp = boost::multiprecision;
 
 constexpr int MOD = 1000000007;
 
@@ -14,10 +15,10 @@ int main() {
   int n;
   cin >> n;
 
-  int128_t ans = 0;
+  mp::int128_t ans = 0;
   bool ok = true;
   for (int i = 0; i < n; ++i) {
-    int128_t a;
+    mp::int128_t a;
     cin >> a;
     if (a == 0) {
       ans = 0;
