@@ -10,12 +10,12 @@ int main() {
   cin.tie(nullptr);
   cout << fixed << setprecision(15);
 
-  long double a, b;
-  int64_t ans;
+  int64_t a, ans;
+  long double b;
   cin >> a >> b;
 
-  a *= b;
-  ans = (int64_t)a;
+  b *= a;
+  ans = (int64_t)b;
 
   cout << ans << '\n';
 
