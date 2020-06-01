@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+#include <boost/multiprecision/cpp_int.hpp>
+
 using namespace std;
 
 constexpr int MOD = 1000000007;
@@ -12,10 +14,10 @@ int main() {
   int n;
   cin >> n;
 
-  int64_t ans = 0;
+  int128_t ans = 0;
   bool ok = true;
   for (int i = 0; i < n; ++i) {
-    int64_t a;
+    int128_t a;
     cin >> a;
     if (a == 0) {
       ans = 0;
