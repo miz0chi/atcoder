@@ -17,10 +17,13 @@ int main() {
   // b *= a;
   // ans = (int64_t)b;
 
-  long long a, ans;
+  int64_t a, ans;
   double b;
   cin >> a >> b;
-  ans = (a * (long long)(b * 100)) / 100;
+  // cerr << (int)(b * 100) << '\n';
+  // cerr << floor(b * 100) << '\n';
+  // cerr << round(b * 100) << '\n';
+  ans = (a * floor(b * 100)) / 100;
 
   cout << ans << '\n';
 
