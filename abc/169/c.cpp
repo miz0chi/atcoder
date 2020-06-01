@@ -20,7 +20,7 @@ int main() {
   int64_t a, ans;
   double b;
   cin >> a >> b;
-  ans = (a * (b * 100)) / 100;
+  ans = (a * (int64_t)(b * 100)) / 100;
 
   cout << ans << '\n';
 
