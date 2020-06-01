@@ -23,7 +23,7 @@ int main() {
   // cerr << (int)(b * 100) << '\n';
   // cerr << floor(b * 100) << '\n';
   // cerr << round(b * 100) << '\n';
-  ans = (a * floor(b * 100)) / 100;
+  ans = (a * round(b * 100)) / 100;
 
   cout << ans << '\n';
 
