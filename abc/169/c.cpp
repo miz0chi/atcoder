@@ -20,7 +20,7 @@ int main() {
   long long a, ans;
   double b;
   cin >> a >> b;
-  ans = (a * (int)(b * 100.0)) / 100;
+  ans = (a * (long long)(b * 100)) / 100;
 
   cout << ans << '\n';
 
