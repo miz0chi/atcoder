@@ -13,7 +13,7 @@ int main() {
   int n;
   cin >> n;
 
-  // mp::int128_t ans = 0;
+  // mp::int128_t ans = 1;
   // bool ok = true;
   // for (int i = 0; i < n; ++i) {
   //   mp::int128_t a;
@@ -23,11 +23,7 @@ int main() {
   //     break;
   //   }
   //   if (ok) {
-  //     if (i == 0) {
-  //       ans += a;
-  //     } else {
-  //       ans *= a;
-  //     }
+  //     ans *= a;
   //     if (ans > 1000000000000000000) {
   //       ans = -1;
   //       ok = false;
@@ -35,7 +31,7 @@ int main() {
   //   }
   // }
 
-  int64_t ans = 0;
+  int64_t ans = 1;
   bool ok = true;
   for (int i = 0; i < n; ++i) {
     int64_t a;
@@ -49,11 +45,7 @@ int main() {
         ans = -1;
         ok = false;
       } else {
-        if (i == 0) {
-          ans += a;
-        } else {
-          ans *= a;
-        }
+        ans *= a;
       }
     }
   }
