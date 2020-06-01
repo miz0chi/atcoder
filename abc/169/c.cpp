@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 
+#include <boost/multiprecision/cpp_dec_float.hpp>
 #include <boost/multiprecision/cpp_int.hpp>
 
 using namespace std;
@@ -11,7 +12,7 @@ int main() {
   cout << fixed << setprecision(15);
 
   int64_t a, ans;
-  long double b;
+  mp::cpp_dec_float_50 b;
   cin >> a >> b;
 
   b *= a;
