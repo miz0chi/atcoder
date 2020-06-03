@@ -13,8 +13,16 @@ int main() {
   unordered_map<int, int> ai;
 
   int i;
-  for (i = 1; !ai.count(s); ++i) {
-    ai[s];
+  // for (i = 1; !ai.count(s); ++i) {
+  //   ai[s];
+  //   if (s % 2) {
+  //     s = s * 3 + 1;
+  //   } else {
+  //     s /= 2;
+  //   }
+  // }
+
+  for (i = 4; s != 4; ++i) {
     if (s % 2) {
       s = s * 3 + 1;
     } else {
