@@ -23,14 +23,13 @@ int main() {
   // }
 
   int i;
-  for (i = 1; s != 1 && s != 2 && s != 4; ++i) {
+  for (i = 4; s != 1 && s != 2 && s != 4; ++i) {
     if (s % 2) {
       s = s * 3 + 1;
     } else {
       s /= 2;
     }
   }
-  i += 3;
 
   cout << i << '\n';
 
