@@ -10,11 +10,10 @@ int main() {
   int s;
   cin >> s;
 
-  set<int> ai;
+  unordered_set<int> ai;
 
-  int bsi = -1, si = 0;
-  int cnt = 1;
-  while (si != bsi) {
+  int bsi = -1, si = 0, i;
+  for (i = 1; si != bsi; ++i) {
     bsi = si;
     if (s % 2) {
       s = s * 3 + 1;
@@ -23,10 +22,9 @@ int main() {
     }
     ai.insert(s);
     si = ai.size();
-    ++cnt;
   }
 
-  cout << cnt << '\n';
+  cout << i << '\n';
 
   return 0;
 }
