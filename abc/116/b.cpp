@@ -10,9 +10,9 @@ int main() {
   int s;
   cin >> s;
 
-  unordered_map<int, int> ai;
+  // unordered_map<int, int> ai;
 
-  int i;
+  // int i;
   // for (i = 1; !ai.count(s); ++i) {
   //   ai[s];
   //   if (s % 2) {
@@ -22,13 +22,15 @@ int main() {
   //   }
   // }
 
-  for (i = 4; s != 4; ++i) {
+  int i;
+  for (i = 1; s != 1 && s != 2 && s != 4; ++i) {
     if (s % 2) {
       s = s * 3 + 1;
     } else {
       s /= 2;
     }
   }
+  i += 3;
 
   cout << i << '\n';
 
