@@ -10,18 +10,16 @@ int main() {
   int s;
   cin >> s;
 
-  unordered_set<int> ai;
+  unordered_map<int, int> ai;
 
-  int bsi = -1, si = 0, i;
-  for (i = 1; si != bsi; ++i) {
-    bsi = si;
+  int i;
+  for (i = 1; !ai.count(s); ++i) {
+    ai[s];
     if (s % 2) {
       s = s * 3 + 1;
     } else {
       s /= 2;
     }
-    ai.insert(s);
-    si = ai.size();
   }
 
   cout << i << '\n';
