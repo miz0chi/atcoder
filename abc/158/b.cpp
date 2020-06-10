@@ -12,7 +12,7 @@ int main() {
 
   int64_t ans;
 
-  ans = (n * a / (a + b)) + (n % (a + b));
+  ans = (n * a / (a + b)) + min(n % (a + b), a);
 
   cout << ans << '\n';
 
