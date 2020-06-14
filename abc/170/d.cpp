@@ -10,28 +10,37 @@ int main() {
   int n;
   cin >> n;
 
-  vector<int> a(n);
+  if (n == 1) {
+    cout << 1 << '\n';
+    return 0;
+  }
+
+  vector<int> a(n), ag(n);
   for (int i = 0; i < n; ++i) {
     cin >> a[i];
   }
-  sort(a.begin(), a.end(), greater<int>());
+  ag = a;
+  sort(a.begin(), a.end());
+  sort(ag.begin(), ag.end(), greater<int>());
 
   int cnt = 0;
   for (int i = 0; i < n; ++i) {
     bool ok = true;
-    for (int j = i + 1; j < n; ++j) {
-      // cerr << "i:" << a[i] << " j:" << a[j] << '\n';
-      if (a[i] % a[j] == 0) {
+    if (ag[i] == ag[i + 1]) {
+      ok = false;
+      break;
+    }
+    for (int j = 0; a[j] <= (int)(ag[i] / 2); ++j) {
+      // cerr << "i:" << ag[i] << " j:" << a[j] << '\n';
+      if (ag[i] % a[j] == 0) {
         ok = false;
         break;
       }
     }
     if (ok) {
       ++cnt;
+      // cerr << "ok" << '\n';
     }
-  }
-  if (a[n - 1] == a[n - 2]) {
-    --cnt;
   }
 
   cout << cnt << '\n';
