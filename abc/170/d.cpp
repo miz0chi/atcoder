@@ -28,6 +28,9 @@ int main() {
     bool ok = true;
     if (ag[i] == ag[i + 1]) {
       ok = false;
+      while (ag[i] == ag[i + 1]) {
+        ++i;
+      }
       break;
     }
     for (int j = 0; a[j] <= (int)(ag[i] / 2); ++j) {
