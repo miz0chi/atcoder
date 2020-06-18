@@ -21,7 +21,12 @@ int main() {
     b = min(b, r[i]);
   }
 
-  cout << b - a + 1 << '\n';
+  int ans = b - a + 1;
+  if (ans < 0) {
+    ans = 0;
+  }
+
+  cout << ans << '\n';
 
   return 0;
 }
