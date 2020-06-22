@@ -11,15 +11,20 @@ int main() {
   cin >> n;
   vector<int> a(n);
 
+  int mn = 0;
   for (int i = 0; i < n; ++i) {
     cin >> a[i];
+    mn = max(mn, a[i]);
   }
+  vector<int> sa = a;
+  sort(sa.begin(), sa.end(), greater<int>());
 
   for (int i = 0; i < n; ++i) {
-    vector<int> sv = a;
-    sv.erase(sv.begin() + i);
-    sort(sv.begin(), sv.end(), greater<int>());
-    cout << sv[0] << '\n';
+    if (a[i] == mn) {
+      cout << sa[1] << '\n';
+    } else {
+      cout << sa[0] << '\n';
+    }
   }
 
   return 0;
