@@ -16,13 +16,10 @@ int main() {
   }
 
   for (int i = 0; i < n; ++i) {
-    int ma = 0;
-    for (int j = 0; j < n; ++j) {
-      if (j != i) {
-        ma = max(ma, a[j]);
-      }
-    }
-    cout << ma << '\n';
+    vector<int> sv = a;
+    sv.erase(sv.begin() + i);
+    sort(sv.begin(), sv.end(), greater<int>());
+    cout << sv[0] << '\n';
   }
 
   return 0;
