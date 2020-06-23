@@ -11,26 +11,15 @@ int main() {
   cin >> a >> b >> c >> k;
 
   int64_t ans;
-  unordered_map<int64_t, bool> m;
-  for (int i = 0; i < k; ++i) {
-    int64_t sa = b + c;
-    int64_t sb = c + a;
-    int64_t sc = a + b;
-    a = sa;
-    b = sb;
-    c = sc;
+  if (k % 2 == 1) {
+    ans = b - a;
+  } else {
     ans = a - b;
-    if (m.count(ans)) {
-      break;
-    } else {
-      m[ans] = true;
-    }
-    if (ans > 1000000000000000000) {
-      cout << "Unfair" << '\n';
-      return 0;
-    }
   }
-  ans = a - b;
+  if (ans > 1e18) {
+    cout << "Unfair" << '\n';
+    return 0;
+  }
 
   cout << ans << '\n';
 
