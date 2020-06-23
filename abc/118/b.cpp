@@ -10,32 +10,50 @@ int main() {
   int n, m;
   cin >> n >> m;
 
-  vector<bool> ok(m, true);
+  // vector<bool> ok(m, true);
 
+  // for (int i = 0; i < n; ++i) {
+  //   int k;
+  //   cin >> k;
+  //   vector<bool> a(m, false);
+  //   for (int j = 0; j < k; ++j) {
+  //     int idx;
+  //     cin >> idx;
+  //     a[idx - 1] = true;
+  //   }
+  //   for (int j = 0; j < m; ++j) {
+  //     ok[j] = ok[j] && a[j];
+  //     // cerr << ok[j] << " ";
+  //   }
+  //   // cerr << '\n';
+  // }
+
+  // int cnt = 0;
+  // for (int i = 0; i < m; ++i) {
+  //   if (ok[i]) {
+  //     ++cnt;
+  //   }
+  // }
+
+  vector<int> cnt(m, 0);
   for (int i = 0; i < n; ++i) {
     int k;
     cin >> k;
-    vector<bool> a(m, false);
     for (int j = 0; j < k; ++j) {
-      int idx;
-      cin >> idx;
-      a[idx - 1] = true;
+      int a;
+      cin >> a;
+      ++cnt[a - 1];
     }
-    for (int j = 0; j < m; ++j) {
-      ok[j] = ok[j] && a[j];
-      // cerr << ok[j] << " ";
-    }
-    // cerr << '\n';
   }
 
-  int cnt = 0;
+  int ans = 0;
   for (int i = 0; i < m; ++i) {
-    if (ok[i]) {
-      ++cnt;
+    if (cnt[i] == n) {
+      ++ans;
     }
   }
 
-  cout << cnt << '\n';
+  cout << ans << '\n';
 
   return 0;
 }
