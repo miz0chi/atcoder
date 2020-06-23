@@ -15,10 +15,10 @@ int main() {
     cin >> p[i];
   }
 
-  int cnt = 0, num = 10000000;
+  int cnt = 0, cmin = 1e9;
   for (int i = 0; i < n; ++i) {
-    num = min(num, p[i]);
-    if (num == p[i]) {
+    cmin = min(cmin, p[i]);
+    if (cmin == p[i]) {
       ++cnt;
     }
   }
