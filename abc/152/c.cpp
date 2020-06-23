@@ -9,31 +9,16 @@ int main() {
 
   int n;
   cin >> n;
-  vector<int> pi(n), pj(n);
+  vector<int> p(n);
 
   for (int i = 0; i < n; ++i) {
-    cin >> pi[i];
-    cerr << pi[i] << " ";
+    cin >> p[i];
   }
-  cerr << '\n';
-  for (int i = 0; i < n; ++i) {
-    pj[i] = pi[pi[i] - 1];
-    cerr << pj[i] << " ";
-  }
-  cerr << '\n';
 
-  int cnt = 0;
+  int cnt = 0, num = 10000000;
   for (int i = 0; i < n; ++i) {
-    bool ok = true;
-    for (int j = 0; j < n; ++j) {
-      if (i != j && pi[i] >= pi[j]) {
-        if (pj[i] > pj[j]) {
-          ok = false;
-          break;
-        }
-      }
-    }
-    if (ok) {
+    num = min(num, p[i]);
+    if (num == p[i]) {
       ++cnt;
     }
   }
