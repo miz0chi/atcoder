@@ -16,18 +16,13 @@ int main() {
     if (i % 2 == 0) {
       if (s[i] == '0') {
         ++cnt1;
-      }
-    } else {
-      if (s[i] == '1') {
-        ++cnt1;
-      }
-    }
-    if (i % 2 == 1) {
-      if (s[i] == '0') {
+      } else {
         ++cnt2;
       }
     } else {
       if (s[i] == '1') {
+        ++cnt1;
+      } else {
         ++cnt2;
       }
     }
