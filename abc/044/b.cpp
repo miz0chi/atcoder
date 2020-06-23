@@ -22,10 +22,13 @@ int main() {
 
   string ans = "Yes";
   for (char c : w) {
+    // cerr << cnt[c] << " ";
     if (cnt[c] % 2 == 1) {
       ans = "No";
+      break;
     }
   }
+  // cerr << '\n';
 
   cout << ans << '\n';
 
