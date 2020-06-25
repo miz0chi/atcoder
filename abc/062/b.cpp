@@ -12,16 +12,15 @@ int main() {
   h += 2;
   w += 2;
 
-  vector<vector<char>> a(h, vector<char>(w));
-
   for (int i = 0; i < h; ++i) {
     for (int j = 0; j < w; ++j) {
       if (i == 0 || j == 0 || i == h - 1 || j == w - 1) {
-        a[i][j] = '#';
+        cout << '#';
       } else {
-        cin >> a[i][j];
+        char c;
+        cin >> c;
+        cout << c;
       }
-      cout << a[i][j];
     }
     cout << '\n';
   }
