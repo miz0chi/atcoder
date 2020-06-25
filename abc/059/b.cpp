@@ -20,8 +20,10 @@ int main() {
     for (unsigned int i = 0; i < a.size(); ++i) {
       if (a[i] > b[i]) {
         ans = "GREATER";
+        break;
       } else if (a[i] < b[i]) {
         ans = "LESS";
+        break;
       }
     }
   }
