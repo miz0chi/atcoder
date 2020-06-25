@@ -10,8 +10,8 @@ int main() {
   int n;
   cin >> n;
 
-  int64_t ans = 3, bef = 1;
-  for (int i = 2; i < n; ++i) {
+  int64_t ans = 1, bef = 2;
+  for (int i = 1; i < n; ++i) {
     int64_t tmp = ans;
     ans += bef;
     bef = tmp;
