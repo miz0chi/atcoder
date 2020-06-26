@@ -9,25 +9,20 @@ int main() {
 
   int n;
   cin >> n;
-  map<string, bool> w;
+  unordered_set<string> s;
   string ans = "Yes";
-  string s, ps;
-  cin >> s;
-  ps = s;
-  w[s] = true;
+  string w;
+  cin >> w;
+  s.insert(w);
+  char c = w.back();
   for (int i = 1; i < n; ++i) {
-    cin >> s;
-    if (ps[ps.size() - 1] != s[0]) {
+    cin >> w;
+    if (c != w[0] || s.count(w)) {
       ans = "No";
       break;
     }
-    if (w.count(s)) {
-      ans = "No";
-      break;
-    } else {
-      w[s] = true;
-    }
-    ps = s;
+    s.insert(w);
+    c = w.back();
   }
 
   cout << ans << '\n';
