@@ -10,11 +10,18 @@ int main() {
 
   int a, b, k;
   cin >> a >> b >> k;
+  --k;
 
+  bool ok = true;
+  if (a + k >= b - k) {
+    ok = false;
+  }
   for (int i = a; i <= b; ++i) {
-    if (i < a + k || i > b - k) {
-      cout << i << '\n';
+    if (ok && i > a + k && i < b - k) {
+      i = b - k - 1;
+      continue;
     }
+    cout << i << '\n';
   }
 
   return 0;
