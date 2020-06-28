@@ -5,7 +5,8 @@ using namespace std;
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
-  cout << fixed << setprecision(15);
+  cout << fixed << setprecision(10);
+  // cerr << fixed << setprecision(10);
 
   int n, d;
   cin >> n >> d;
@@ -25,10 +26,12 @@ int main() {
         dist += (x[i][k] - x[j][k]) * (x[i][k] - x[j][k]);
       }
       dist = sqrt(dist);
+      // cerr << floor(dist) << "=" << dist << ", ";
       if (floor(dist) == dist) {
         ++cnt;
       }
     }
+    // cerr << '\n';
   }
 
   cout << cnt << '\n';
