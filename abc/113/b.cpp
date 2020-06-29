@@ -11,15 +11,15 @@ int main() {
   int n;
   double t, a;
   cin >> n >> t >> a;
-  int ans = -1;
-  double absa = 1000.0;
+  int ans = 0;
+  double absa = 10e5;
   for (int i = 0; i < n; ++i) {
     double x;
     cin >> x;
-    x = t - (x * 0.006);
-    // cerr << x << '\n';
-    if (absa > abs(a - x)) {
-      absa = abs(a - x);
+    double h = abs(a - (t - (x * 0.006)));
+    cerr << h << '\n';
+    if (absa > h) {
+      absa = h;
       ans = i + 1;
     }
   }
