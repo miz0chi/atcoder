@@ -8,15 +8,18 @@ int main() {
   cout << fixed << setprecision(10);
   cerr << fixed << setprecision(10);
 
-  double a, b;
+  int a, b;
   cin >> a >> b;
 
-  double ans = ceil(a / 2.0 * 25.0);
-  if (floor(ans / 10.0) == b) {
-    cout << (int)ans << '\n';
-  } else {
-    cout << "-1" << '\n';
+  int minb = b * 10;
+  int maxb = (b + 1) * 10;
+  for (int i = minb; i < maxb; ++i) {
+    if ((int)(i / 12.5) == a) {
+      cout << i << '\n';
+      return 0;
+    }
   }
+  cout << "-1" << '\n';
 
   return 0;
 }
