@@ -12,12 +12,12 @@ int main() {
   double t, a;
   cin >> n >> t >> a;
   int ans = 0;
-  double absa = 10e5;
+  double absa = 10000.0;
   for (int i = 0; i < n; ++i) {
-    double x;
-    cin >> x;
-    double h = abs(a - (t - (x * 0.006)));
-    cerr << h << '\n';
+    double h;
+    cin >> h;
+    h = abs(a - (t - (h * 0.006)));
+    // cerr << h << '\n';
     if (absa > h) {
       absa = h;
       ans = i + 1;
