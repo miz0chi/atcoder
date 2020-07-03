@@ -10,7 +10,7 @@ int main() {
   cin >> s >> t;
 
   string ans = "No";
-  for (unsigned int i = 0; i < s.size() - 1; ++i) {
+  for (unsigned int i = 0; i < s.size(); ++i) {
     // cerr << s << '\n';
     if (s == t) {
       ans = "Yes";
