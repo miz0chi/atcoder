@@ -16,11 +16,7 @@ int main() {
       ans = "Yes";
       break;
     }
-    char tmp = s[0];
-    for (unsigned int i = 0; i < s.size() - 1; ++i) {
-      s[i] = s[i + 1];
-    }
-    s[s.size() - 1] = tmp;
+    s = s.back() + s.substr(0, s.size() - 1);
   }
 
   cout << ans << '\n';
