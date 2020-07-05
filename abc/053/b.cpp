@@ -19,9 +19,10 @@ int main() {
       break;
     }
   }
-  for (int i = frt + 1; i < ss; ++i) {
+  for (int i = ss; i > frt; --i) {
     if (s[i] == 'Z') {
-      bck = max(i, bck);
+      bck = i;
+      break;
     }
   }
 
