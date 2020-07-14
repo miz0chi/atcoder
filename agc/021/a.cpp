@@ -19,6 +19,8 @@ int main() {
   }
   if (ok) {
     ans += ((n[0] - '0') - 1);
+  } else {
+    ans += (n[0] - '0');
   }
   cout << ans << '\n';
 
