@@ -9,9 +9,17 @@ int main() {
   string n;
   cin >> n;
 
-  int ans = 9 * (n.size() - 1);
-  ans += ((n[0] - '0') - 1);
-
+  int ans = 0;
+  bool ok = false;
+  for (unsigned int i = n.size() - 1; i > 0; --i) {
+    ans += 9;
+    if (n[i] != '9') {
+      ok = true;
+    }
+  }
+  if (ok) {
+    ans += ((n[0] - '0') - 1);
+  }
   cout << ans << '\n';
 
   return 0;
