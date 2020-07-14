@@ -13,7 +13,7 @@ int main() {
   for (int i = 2; i < 32; ++i) {
     int j = 2;
     int a = pow(i, j);
-    while (a < x) {
+    while (a <= x) {
       ans = max(ans, a);
       ++j;
       a = pow(i, j);
