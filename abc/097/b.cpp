@@ -11,12 +11,10 @@ int main() {
 
   int ans = 1;
   for (int i = 2; i < 32; ++i) {
-    int j = 2;
-    int a = pow(i, j);
+    int a = i * i;
     while (a <= x) {
       ans = max(ans, a);
-      ++j;
-      a = pow(i, j);
+      a *= i;
     }
   }
 
