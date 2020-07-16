@@ -16,6 +16,7 @@ int main() {
     int p;
     string s;
     cin >> p >> s;
+    --p;
     if (y[p]) {
       if (s == "WA") {
         ++x[p];
