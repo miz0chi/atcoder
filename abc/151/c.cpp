@@ -10,6 +10,7 @@ int main() {
   cin >> n >> m;
 
   vector<bool> y(n, true);
+  vector<int> x(m, 0);
   int ac = 0, pen = 0;
   for (int i = 0; i < m; ++i) {
     int p;
@@ -17,10 +18,11 @@ int main() {
     cin >> p >> s;
     if (y[p]) {
       if (s == "WA") {
-        ++pen;
+        ++x[p];
       } else {
         ++ac;
         y[p] = false;
+        pen += x[p];
       }
     }
   }
