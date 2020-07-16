@@ -9,20 +9,18 @@ int main() {
   int n, m;
   cin >> n >> m;
 
-  vector<bool> ok(n, false);
+  vector<bool> y(n, true);
   int ac = 0, pen = 0;
   for (int i = 0; i < m; ++i) {
     int p;
     string s;
     cin >> p >> s;
-    if (s == "WA") {
-      if (!ok[p]) {
+    if (y[p]) {
+      if (s == "WA") {
         ++pen;
-      }
-    } else {
-      if (!ok[p]) {
+      } else {
         ++ac;
-        ok[p] = true;
+        y[p] = false;
       }
     }
   }
