@@ -10,7 +10,7 @@ int main() {
   cin >> n >> m;
 
   vector<bool> y(n, true);
-  vector<int> x(m, 0);
+  vector<int> x(n, 0);
   int ac = 0, pen = 0;
   for (int i = 0; i < m; ++i) {
     int p;
