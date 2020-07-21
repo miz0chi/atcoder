@@ -14,7 +14,7 @@ int main() {
   if (dist % 2 == 0) {
     ans = dist / 2;
   } else {
-    ans = a;
+    ans = min(a, n - b);
     ans += (dist - 1) / 2;
   }
 
