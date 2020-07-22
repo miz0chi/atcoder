@@ -11,7 +11,7 @@ int main() {
 
   int64_t rtn = sqrt(n);
   int64_t ans = 0;
-  for (int i = 1; i < rtn; ++i) {
+  for (int i = 1; i <= rtn; ++i) {
     if (n % i == 0) {
       ans = n / i + i - 2;
     }
