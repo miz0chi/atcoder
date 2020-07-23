@@ -14,17 +14,16 @@ int main() {
     cin >> a[i];
   }
 
-  bool ok = false;
-  int cnt = -1;
-  while (!ok) {
-    ok = true;
-    ++cnt;
+  bool ok = true;
+  int cnt = 0;
+  while (ok) {
+    ok = false;
     for (int i = 0; i < n; ++i) {
-      if (ok && a[i] % 2 == 0) {
+      if (a[i] % 2 == 0) {
         a[i] /= 2;
-        ok = false;
-      } else {
-        a[i] *= 3;
+        ok = true;
+        ++cnt;
+        break;
       }
     }
   }
