@@ -12,9 +12,8 @@ int main() {
 
   q *= 4;
   h *= 2;
-  int one = min(min(q, h), s);
-  int64_t ans = n * one;
-  ans = min(ans, (n / 2) * d + (n - (n / 2) * 2) * one);
+  s = min(min(q, h), s);
+  int64_t ans = min(n * s, (n / 2) * d + (n - (n / 2) * 2) * s);
   // cerr << n * one << '\n';
   // cerr << (n / 2) * d + (n - (n / 2) * 2) * one << '\n';
 
