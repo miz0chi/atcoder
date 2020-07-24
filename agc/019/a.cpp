@@ -10,12 +10,8 @@ int main() {
   int64_t n;
   cin >> q >> h >> s >> d >> n;
 
-  q *= 4;
-  h *= 2;
-  s = min(min(q, h), s);
+  s = min(min(q * 4, h * 2), s);
   int64_t ans = min(n * s, (n / 2) * d + (n - (n / 2) * 2) * s);
-  // cerr << n * one << '\n';
-  // cerr << (n / 2) * d + (n - (n / 2) * 2) * one << '\n';
 
   cout << ans << '\n';
 
