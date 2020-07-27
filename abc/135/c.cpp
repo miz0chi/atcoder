@@ -21,10 +21,11 @@ int main() {
   int64_t x = 0, y = 0;
   for (int i = 0; i < n; ++i) {
     x = min(a[i], b[i]);
-    y = b[i] - min(a[i + 1], x);
+    b[i] -= x;
+    y = min(a[i + 1], b[i]);
+    a[i + 1] -= y;
     ans += x;
     ans += y;
-    a[i + 1] -= y;
   }
 
   cout << ans << '\n';
