@@ -6,13 +6,15 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  int d;
-  string n;
+  int d, n;
   cin >> d >> n;
+  if (n == 100) {
+    ++n;
+  }
 
-  string ans = n;
+  int ans = n;
   for (int i = 0; i < d; ++i) {
-    ans += "00";
+    ans *= 100;
   }
 
   cout << ans << '\n';
