@@ -9,16 +9,16 @@ int main() {
   string s;
   int64_t k;
   cin >> s >> k;
+  int ss = s.size();
 
   char ans = '1';
-  if (k == 1) {
-    ans = s[0];
-  } else {
-    for (char c : s) {
-      if (c != '1') {
-        ans = c;
-        break;
-      }
+  for (int i = 0; i < ss; ++i) {
+    if (i == k - 1) {
+      break;
+    }
+    if (s[i] != '1') {
+      ans = s[i];
+      break;
     }
   }
 
