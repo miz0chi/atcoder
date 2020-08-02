@@ -20,15 +20,9 @@ int main() {
   }
   int ans = min(r, w);
 
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < r; ++i) {
     if (s[i] == 'W') {
-      for (int j = n - 1; j > i; --j) {
-        if (s[j] == 'R') {
-          s[j] = 'W';
-          ++swap;
-          break;
-        }
-      }
+      ++swap;
     }
   }
   ans = min(ans, swap);
