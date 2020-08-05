@@ -7,15 +7,15 @@ int main() {
   cin.tie(nullptr);
 
   int n;
-  double d;
+  int64_t d;
   cin >> n >> d;
 
   int cnt = 0;
   for (int i = 0; i < n; ++i) {
-    long double x, y;
+    int64_t x, y;
     cin >> x >> y;
-    long double dist = sqrt(x * x + y * y);
-    if (dist <= d) {
+    int64_t dist = x * x + y * y;
+    if (dist <= d * d) {
       ++cnt;
     }
   }
