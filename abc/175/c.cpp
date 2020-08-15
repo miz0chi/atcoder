@@ -18,7 +18,7 @@ int main() {
     even = false;
   }
 
-  int64_t ans = x;
+  int64_t ans = abs(x);
   if (even == false) {
     ans = abs(x - d);
   }
