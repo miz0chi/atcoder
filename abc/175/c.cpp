@@ -9,27 +9,18 @@ int main() {
   int64_t x, k, d;
   cin >> x >> k >> d;
 
+  int64_t def = min(x / d, k);
+  k -= def;
+  x -= (def * d);
+
   bool even = true;
   if (k % 2 == 1) {
     even = false;
   }
 
-  int64_t ans = abs(x);
+  int64_t ans = x;
   if (even == false) {
     ans = abs(x - d);
-    --k;
-  }
-
-  for (int i = 0; i < k; ++i) {
-    int64_t absa = abs(ans - d);
-    if (even) {
-      absa = abs(absa - d);
-    }
-    if (absa < ans) {
-      ans = absa;
-    } else {
-      break;
-    }
   }
 
   cout << ans << '\n';
