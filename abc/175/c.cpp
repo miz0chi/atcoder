@@ -9,6 +9,7 @@ int main() {
   int64_t x, k, d;
   cin >> x >> k >> d;
 
+  x = abs(x);
   int64_t def = min(x / d, k);
   k -= def;
   x -= (def * d);
@@ -18,7 +19,7 @@ int main() {
     even = false;
   }
 
-  int64_t ans = abs(x);
+  int64_t ans = x;
   if (even == false) {
     ans = abs(x - d);
   }
