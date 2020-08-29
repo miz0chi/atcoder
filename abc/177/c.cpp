@@ -10,19 +10,19 @@ int main() {
   int n;
   cin >> n;
 
-  int64_t nsum = 0;
-
   vector<int64_t> a(n);
   for (int i = 0; i < n; ++i) {
     cin >> a[i];
-    nsum += a[i];
-    nsum %= MOD;
   }
 
   int64_t ans = 0;
 
-  for (int i = 0; i < n; ++i) {
-    nsum -= a[i];
+  for (int i = 0; i < n - 1; ++i) {
+    int64_t nsum = 0;
+    for (int j = i + 1; j < n; ++j) {
+      nsum += a[j];
+      nsum %= MOD;
+    }
     ans += (nsum * a[i]);
     ans %= MOD;
   }
