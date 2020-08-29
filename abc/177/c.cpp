@@ -22,6 +22,7 @@ int main() {
 
   for (int i = 0; i < n; ++i) {
     nsum -= a[i];
+    nsum %= MOD;
     ans += (nsum * a[i]);
     ans %= MOD;
   }
